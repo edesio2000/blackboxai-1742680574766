@@ -1,0 +1,46 @@
+/* Custom styles */
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Form input styles */
+input {
+    @apply border-gray-300 focus:border-green-500 focus:ring-green-500;
+}
+
+/* Table styles */
+.table-row-hover:hover {
+    @apply bg-gray-50;
+}
+
+/* Modal animation */
+.modal-enter {
+    animation: modal-fade-in 0.3s ease-out;
+}
+
+@keyframes modal-fade-in {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Notification animation */
+.notification-enter {
+    animation: notification-slide-in 0.3s ease-out;
+}
+
+@keyframes notification-slide-in {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
